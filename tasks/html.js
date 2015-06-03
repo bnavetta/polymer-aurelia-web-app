@@ -13,6 +13,12 @@ gulp.task('html', function() {
         .pipe($.size({title: 'HTML'}));
 });
 
+gulp.task('component-html', function() {
+    return gulp.src('js/**/*.html')
+        .pipe(gulp.dest('dist/js'))
+        .pipe($.size({title: 'Component HTML'}));
+});
+
 gulp.task('vulcanize', function() {
     // return gulp.src('dist/elements/elements.vulcanized.html')
     return gulp.src('elements/elements.html')

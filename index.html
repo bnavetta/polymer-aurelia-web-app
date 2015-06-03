@@ -14,11 +14,22 @@
     </head>
 
     <body>
+        <template id="app" is="dom-bind">
+            <app></app>
+
+            <platinum-sw-register auto-register clients-claim skip-waiting>
+                <platinum-sw-cache default-cache-strategy="networkFirst"
+                                   precache-file="precache.json">
+                </platinum-sw-cache>
+            </platinum-sw-register>
+        </template>
 
         <script src="jspm_packages/system.js"></script>
         <script src="config.js"></script>
         <script>
-            System.import('js/main').catch(console.error.bind(console));
+         System.import('js/main').catch(function(err) {
+             console.error(err, err.stack);
+         });
         </script>
     </body>
 

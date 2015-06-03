@@ -21,3 +21,5 @@ rules:
   comma-style: [2, "last"]
   indent: [2, 4, {"indentSwitchCase": true}]
   no-var: 2
+  # Angular2 decorators use caps
+  new-cap: 0

@@ -9,7 +9,7 @@ gulp.task('build', function(cb) {
     runSequence(
         ['eslint', 'clean'],
         ['css', 'images', 'bundle-js'],
-        ['html', 'vulcanize', 'copy'],
+        ['html', 'vulcanize', 'copy', 'component-html'],
         'precache',
         cb);
 });

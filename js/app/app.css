@@ -1,0 +1,6 @@
+@import "include/variables.css";
+
+h1 {
+    color: var(--base-color);
+    font-family: Roboto, sans-serif;
+}
