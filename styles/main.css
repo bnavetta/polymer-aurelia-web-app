@@ -1,0 +1,5 @@
+@import "include/variables.css";
+
+body {
+    color: var(--base-color);
+}

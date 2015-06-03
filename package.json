@@ -1,16 +1,40 @@
 {
-    "private": true,
-    "jspm": {
-        "directories": {
-            
-        },
-        "devDependencies": {
-            "babel": "npm:babel-core@^5.1.13",
-            "babel-runtime": "npm:babel-runtime@^5.1.13",
-            "core-js": "npm:core-js@^0.9.4"
-        }
-    },
+  "private": true,
+  "jspm": {
+    "directories": {},
     "devDependencies": {
-        
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
     }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.6",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-changed": "^1.2.1",
+    "gulp-cssnext": "^1.0.0",
+    "gulp-flatten": "0.0.4",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^1.1.5",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uncss": "^1.0.1",
+    "gulp-useref": "^1.2.0",
+    "gulp-vulcanize": "^6.0.0",
+    "jshint-stylish": "^2.0.0",
+    "merge-stream": "^0.1.7",
+    "mkdirp": "^0.5.1",
+    "opn": "^1.0.2",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.0",
+    "vulcanize": "^1.8.1"
+  }
 }
