@@ -6,7 +6,10 @@ var runSequence = require('run-sequence');
 require('require-dir')('tasks');
 
 gulp.task('build', function(cb) {
-    runSequence(['css', 'images']);
+    runSequence(
+        'eslint',
+        ['css', 'images'],
+        cb);
 });
 
 gulp.task('default', ['build']);
