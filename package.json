@@ -2,6 +2,9 @@
   "private": true,
   "jspm": {
     "directories": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-alpha.25"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
       "babel-runtime": "npm:babel-runtime@^5.1.13",
@@ -30,6 +33,7 @@
     "gulp-uncss": "^1.0.1",
     "gulp-useref": "^1.2.0",
     "gulp-vulcanize": "^6.0.0",
+    "jspm": "^0.15.6",
     "merge-stream": "^0.1.7",
     "mkdirp": "^0.5.1",
     "opn": "^1.0.2",

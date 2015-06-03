@@ -8,7 +8,7 @@ require('require-dir')('tasks');
 gulp.task('build', function(cb) {
     runSequence(
         'eslint',
-        ['css', 'images'],
+        ['css', 'images', 'bundle-js'],
         cb);
 });
 

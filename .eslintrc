@@ -2,18 +2,21 @@
 parser: babel-eslint
 
 env:
-  - browser
-  - es6
+  browser: true
+  es6: true
+  amd: true
 
 rules:
   comma-dangle: [1, "always-multiline"]
   no-console: 0
   consistent-return: 2
   curly: [2, "multi-line"]
+  quotes: [2, "single"]
   default-case: 1
   dot-location: [2, "property"]
   eqeqeq: 2
   strict: [2, "global"]
+  global-strict: 0
   camelcase: 2
   comma-style: [2, "last"]
   indent: [2, 4, {"indentSwitchCase": true}]
