@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8"/>
+
+        <title>Web App</title>
+
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+        <link rel="import" href="elements/elements.html">
+
+    </head>
+
+    <body>
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('js/main').catch(console.error.bind(console));
+        </script>
+    </body>
+
+</html>
