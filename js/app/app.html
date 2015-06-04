@@ -1,3 +1,27 @@
 <style>@import "app.css";</style>
 
-<h1>Hello, {{ name }}!</h1>
+<paper-drawer-panel forceNarrow #drawerPanel>
+    <div drawer>
+
+        <paper-toolbar>
+            <span>Menu</span>
+        </paper-toolbar>
+
+        <paper-menu class="list">
+            <a router-link="home">Home</a>
+        </paper-menu>
+
+    </div>
+    <div main>
+        <paper-header-panel class="flex" mode="waterfall-tall">
+            <paper-toolbar>
+                <button tabindex="1" id="paperToggle" paper-drawer-toggle>
+                    <iron-icon icon="menu" paper-drawer-toggle></iron-icon>
+                </button>
+            </paper-toolbar>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </paper-header-panel>
+    </div>
+</paper-drawer-panel>

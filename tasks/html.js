@@ -21,7 +21,7 @@ gulp.task('component-html', function() {
 
 gulp.task('vulcanize', function() {
     // return gulp.src('dist/elements/elements.vulcanized.html')
-    return gulp.src('elements/elements.html')
+    return gulp.src('dist/elements/elements.html')
         .pipe($.vulcanize({
             dest: 'dist/elements',
             strip: true,

@@ -17,7 +17,7 @@ gulp.task('precache', function(cb) {
             files.push('index.html',
                        'bundle.js',
                        'config.js',
-                       'bower_components/webcomponentsjs/webcomponents.min.js');
+                       'bower_components/webcomponentsjs/webcomponents-lite.min.js');
             var filePath = path.join(dir, 'precache.json');
             fs.writeFile(filePath, JSON.stringify(files), cb);
         }

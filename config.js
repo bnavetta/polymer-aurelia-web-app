@@ -4,7 +4,10 @@ System.config({
     "optional": [
       "runtime",
       "es7.decorators"
-    ]
+    ],
+      plugins: [
+          'angular2-annotations'
+      ]
   },
   "paths": {
     "*": "*.js",
@@ -18,6 +21,7 @@ System.config({
   "map": {
     "angular2": "npm:angular2@2.0.0-alpha.25",
     "babel": "npm:babel-core@5.4.7",
+    "babel-plugin-angular2-annotations": "npm:babel-plugin-angular2-annotations@1.1.0",
     "babel-runtime": "npm:babel-runtime@5.4.7",
     "core-js": "npm:core-js@0.9.13",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
@@ -92,6 +96,12 @@ System.config({
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
+    },
+    "npm:babel-plugin-angular2-annotations@1.1.0": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "babel-rtts-helper": "npm:babel-rtts-helper@0.2.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:brace-expansion@1.1.0": {
       "balanced-match": "npm:balanced-match@0.2.0",

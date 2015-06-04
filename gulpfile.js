@@ -7,9 +7,10 @@ require('require-dir')('tasks');
 
 gulp.task('build', function(cb) {
     runSequence(
-        ['eslint', 'clean'],
+        [/*'eslint',*/ 'clean'],
         ['css', 'images', 'bundle-js'],
-        ['html', 'vulcanize', 'copy', 'component-html'],
+        'copy',
+        ['html', 'vulcanize', 'component-html'],
         'precache',
         cb);
 });

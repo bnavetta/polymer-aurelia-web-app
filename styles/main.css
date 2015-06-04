@@ -1,5 +1,7 @@
 @import "include/variables.css";
 
 body {
-    color: var(--base-color);
+    background: #FAFAFA;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
 }

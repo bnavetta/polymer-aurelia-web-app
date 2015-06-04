@@ -14,7 +14,8 @@ gulp.task('copy', function() {
             .pipe(gulp.dest('dist/elements/bootstrap'));
     var swToolbox = gulp.src('bower_components/sw-toolbox/*.js')
             .pipe(gulp.dest('dist/sw-toolbox'));
+    var elements = gulp.src('elements/**/*.html').pipe(gulp.dest('dist/elements'));
 
-    return merge(bower, jspm, swBootstrap, swToolbox)
+    return merge(bower, jspm, swBootstrap, swToolbox, elements)
         .pipe($.size({title: 'Copy'}));
 });
