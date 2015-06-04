@@ -14,8 +14,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('component-html', function() {
-    return gulp.src('js/**/*.html')
-        .pipe(gulp.dest('dist/js'))
+    return gulp.src('app/**/*.html')
+        .pipe(gulp.dest('dist/app'))
         .pipe($.size({title: 'Component HTML'}));
 });
 

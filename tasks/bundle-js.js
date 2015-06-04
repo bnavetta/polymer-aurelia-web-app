@@ -7,7 +7,7 @@ var fs = require('fs');
 
 gulp.task('bundle-js', function(cb) {
     var builder = jspm.Builder();
-    builder.build('js/main.ts!', null, {sourceMaps: true, minify: true})
+    builder.build('app/main.ts!', null, {sourceMaps: true, minify: true})
         .then(function(bundle) {
             mkdirp.sync('dist');
             fs.writeFileSync('dist/bundle.js', bundle.source);

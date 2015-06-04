@@ -11,9 +11,9 @@ gulp.task('serve', ['build'], function() {
 
     var reload = browserSync.reload;
     gulp.watch('*.html', ['html', reload]);
-    gulp.watch('js/**/*.html', ['component-html', reload]);
+    gulp.watch('app/**/*.html', ['component-html', reload]);
     gulp.watch('elements/**/*.html', ['vulcanize', reload]);
     gulp.watch('{styles,elements,js}/**/*.css', ['css', reload]); // TODO: stream
-    gulp.watch(['js/**/*', 'config.js'], ['bundle-js', reload]);
+    gulp.watch(['app/**/*', 'config.js'], ['bundle-js', reload]);
     gulp.watch('images/**/*', reload);
 });

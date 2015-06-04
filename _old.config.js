@@ -1,6 +1,4 @@
 System.config({
-  "baseURL": "/",
-  "defaultJSExtensions": false,
   "transpiler": "babel",
   "babelOptions": {
     "optional": [
@@ -8,58 +6,22 @@ System.config({
       "es7.decorators"
     ]
   },
-    "typescriptOptions": {
-        "emitDecoratorMetadata": true
-    },
   "paths": {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
-  },
-  "packages": {
-    "app": {
-      "main": "main.ts",
-      "format": "esm",
-        "defaultExtension": "ts",
-        "meta": {
-            "*": {loader: "ts"}
-        }
-    },
-    "jspm_packages/npm/angular2@2.0.0-alpha.26": {
-      "format": "esm",
-      "defaultExtension": "es6"
-    },
-      "jspm_packages/npm/reflect-metadata@0.1.0": {
-          "defaultExtension": "js",
-          "main": "Reflect"
-      },
-      "jspm_packages/github/frankwallis/plugin-typescript@1.0.4": {
-          "defaultExtension": "js",
-          "main": "lib/plugin",
-          "map": {
-              "convert-source-map": "npm:convert-source-map@0.4.1",
-              "path": "npm:path@0.11.14",
-              "requires": "npm:requires@1.0.2",
-              "typescript": "npm:typescript@1.5.0-beta"
-          }
-      },
-      "jspm_packages/npm/typescript@1.5.0-beta": {
-          "defaultExtension": "js",
-          "main": "bin/typescript"
-      }
-  },
-    "map": {
-        "jspm_packages/npm/angular2@2.0.0-alpha.26": "jspm_packages/npm/angular2@2.0.0-alpha.26/es6/prod",
-        "angular2": "npm:angular2@2.0.0-alpha.26/es6/prod"
-    }
+    "*": "*.js",
+    "github:*": "jspm_packages/github/*.js",
+    "npm:*": "jspm_packages/npm/*.js",
+    "npm:angular2@2.0.0-alpha.25/*": "jspm_packages/npm/angular2@2.0.0-alpha.25/es6/prod/*.es6"
+  }
 });
 
 System.config({
   "map": {
-    // "angular2": "npm:angular2@2.0.0-alpha.26",
+    "angular2": "npm:angular2@2.0.0-alpha.25",
     "babel": "npm:babel-core@5.4.7",
     "babel-runtime": "npm:babel-runtime@5.4.7",
-    "core-js": "npm:core-js@0.9.14",
+    "core-js": "npm:core-js@0.9.13",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
+    "text": "github:systemjs/plugin-text@0.0.2",
     "ts": "github:frankwallis/plugin-typescript@1.0.4",
     "github:frankwallis/plugin-typescript@1.0.4": {
       "convert-source-map": "npm:convert-source-map@0.4.1",
@@ -120,12 +82,11 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:angular2@2.0.0-alpha.26": {
+    "npm:angular2@2.0.0-alpha.25": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "reflect-metadata": "npm:reflect-metadata@0.1.0",
-      "rtts_assert": "npm:rtts_assert@2.0.0-alpha.26",
+      "rtts_assert": "npm:rtts_assert@2.0.0-alpha.25",
       "rx": "npm:rx@2.5.1",
       "traceur": "npm:traceur@0.0.87",
       "url": "github:jspm/nodelibs-url@0.1.0",
@@ -141,6 +102,12 @@ System.config({
     },
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
+    },
+    "npm:babel-plugin-angular2-annotations@1.1.0": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "babel-rtts-helper": "npm:babel-rtts-helper@0.2.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:brace-expansion@1.1.0": {
       "balanced-match": "npm:balanced-match@0.2.0",
@@ -194,7 +161,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
-    "npm:core-js@0.9.14": {
+    "npm:core-js@0.9.13": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -355,7 +322,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:rtts_assert@2.0.0-alpha.26": {
+    "npm:rtts_assert@2.0.0-alpha.25": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },

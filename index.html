@@ -198,7 +198,6 @@
 
     <body unresolved class="fullbleed layout vertical">
         <app></app>
-        
 
         <template is="dom-bind" id="app">
             <paper-drawer-panel forceNarrow id="paperDrawerPanel">
@@ -238,7 +237,7 @@
             <script src="jspm_packages/system.js"></script>
             <script src="config.js"></script>
             <script>
-             System.import('js/main.ts!').catch(function(err) {
+             System.import('js/main').catch(function(err) {
                  console.error(err, err.stack);
              });
             </script>

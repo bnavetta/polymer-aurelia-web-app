@@ -1,18 +1,15 @@
 {
-  "private": true,
   "jspm": {
     "directories": {},
     "dependencies": {
-      "angular2": "npm:angular2@^2.0.0-alpha.25",
-      "babel-plugin-angular2-annotations": "npm:babel-plugin-angular2-annotations@^1.1.0",
+      "angular2": "npm:angular2@^2.0.0-alpha.26",
       "reflect-metadata": "npm:reflect-metadata@^0.1.0",
-      "text": "github:systemjs/plugin-text@^0.0.2",
       "ts": "github:frankwallis/plugin-typescript@^1.0.4"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^0.9.4"
+      "babel": "npm:babel-core@^5.4.3",
+      "babel-runtime": "npm:babel-runtime@^5.4.3",
+      "core-js": "npm:core-js@^0.9.10"
     }
   },
   "devDependencies": {
@@ -37,7 +34,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uncss": "^1.0.1",
     "gulp-vulcanize": "^6.0.0",
-    "jspm": "^0.15.6",
+    "jspm": "jspm/jspm-cli",
     "merge-stream": "^0.1.7",
     "mkdirp": "^0.5.1",
     "opn": "^1.0.2",

@@ -1,5 +1,3 @@
-'use strict';
-
 import { Component, View, ElementRef } from 'angular2/angular2';
 import { ViewRef } from 'angular2/view';
 import { Router, RouteConfig, RouterOutlet, RouterLink } from 'angular2/router';
