@@ -9,7 +9,7 @@ gulp.task('copy', function() {
     // robots.txt?
 
     var bower = gulp.src('bower_components/**/*').pipe(gulp.dest('dist/bower_components'));
-    var jspm = gulp.src('jspm_packages/*').pipe(gulp.dest('dist/jspm_packages'));
+    var jspm = gulp.src('jspm_packages/**/*').pipe(gulp.dest('dist/jspm_packages'));
     var swBootstrap = gulp.src('bower_components/platinum-sw/bootstrap/*.js')
             .pipe(gulp.dest('dist/elements/bootstrap'));
     var swToolbox = gulp.src('bower_components/sw-toolbox/*.js')

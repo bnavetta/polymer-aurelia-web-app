@@ -4,13 +4,10 @@ System.config({
     "optional": [
       "runtime",
       "es7.decorators"
-    ],
-      plugins: [
-          'angular2-annotations'
-      ]
+    ]
   },
   "paths": {
-    "*": "*.js",
+      "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
     "npm:angular2@2.0.0-alpha.25/*": "jspm_packages/npm/angular2@2.0.0-alpha.25/es6/prod/*.es6"
@@ -21,11 +18,17 @@ System.config({
   "map": {
     "angular2": "npm:angular2@2.0.0-alpha.25",
     "babel": "npm:babel-core@5.4.7",
-    "babel-plugin-angular2-annotations": "npm:babel-plugin-angular2-annotations@1.1.0",
     "babel-runtime": "npm:babel-runtime@5.4.7",
     "core-js": "npm:core-js@0.9.13",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
     "text": "github:systemjs/plugin-text@0.0.2",
+    "ts": "github:frankwallis/plugin-typescript@1.0.4",
+    "github:frankwallis/plugin-typescript@1.0.4": {
+      "convert-source-map": "npm:convert-source-map@0.4.1",
+      "path": "npm:path@0.11.14",
+      "requires": "npm:requires@1.0.2",
+      "typescript": "npm:typescript@1.5.0-beta"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -48,6 +51,9 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "github:jspm/nodelibs-os@0.1.0": {
+      "os-browserify": "npm:os-browserify@0.1.2"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
@@ -150,6 +156,11 @@ System.config({
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:convert-source-map@0.4.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0"
+    },
     "npm:core-js@0.9.13": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -241,6 +252,9 @@ System.config({
     "npm:once@1.3.2": {
       "wrappy": "npm:wrappy@1.0.1"
     },
+    "npm:os-browserify@0.1.2": {
+      "os": "github:jspm/nodelibs-os@0.1.0"
+    },
     "npm:parse-asn1@3.0.1": {
       "asn1.js": "npm:asn1.js@2.0.3",
       "browserify-aes": "npm:browserify-aes@1.0.1",
@@ -251,6 +265,11 @@ System.config({
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:path@0.11.14": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:pbkdf2@3.0.4": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -357,6 +376,14 @@ System.config({
       "source-map-support": "npm:source-map-support@0.2.10",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:typescript@1.5.0-beta": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "os": "github:jspm/nodelibs-os@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "readline": "github:jspm/nodelibs-readline@0.1.0"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

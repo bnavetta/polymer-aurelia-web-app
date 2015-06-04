@@ -14,6 +14,6 @@ gulp.task('serve', ['build'], function() {
     gulp.watch('js/**/*.html', ['component-html', reload]);
     gulp.watch('elements/**/*.html', ['vulcanize', reload]);
     gulp.watch('{styles,elements,js}/**/*.css', ['css', reload]); // TODO: stream
-    gulp.watch('js/**/*', ['bundle-js', reload]);
+    gulp.watch(['js/**/*', 'config.js'], ['bundle-js', reload]);
     gulp.watch('images/**/*', reload);
 });

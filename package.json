@@ -6,7 +6,8 @@
       "angular2": "npm:angular2@^2.0.0-alpha.25",
       "babel-plugin-angular2-annotations": "npm:babel-plugin-angular2-annotations@^1.1.0",
       "reflect-metadata": "npm:reflect-metadata@^0.1.0",
-      "text": "github:systemjs/plugin-text@^0.0.2"
+      "text": "github:systemjs/plugin-text@^0.0.2",
+      "ts": "github:frankwallis/plugin-typescript@^1.0.4"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
