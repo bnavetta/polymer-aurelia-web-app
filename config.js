@@ -1,16 +1,16 @@
 System.config({
   "baseURL": "/",
-  "defaultJSExtensions": false,
-  "transpiler": "babel",
+  "defaultJSExtensions": true,
+  "transpiler": "typescript",
   "babelOptions": {
     "optional": [
       "runtime",
       "es7.decorators"
     ]
   },
-    "typescriptOptions": {
-        "emitDecoratorMetadata": true
-    },
+  "typescriptOptions": {
+    "emitDecoratorMetadata": true
+  },
   "paths": {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
@@ -19,48 +19,25 @@ System.config({
     "app": {
       "main": "main.ts",
       "format": "esm",
-        "defaultExtension": "ts",
-        "meta": {
-            "*": {loader: "ts"}
+      "defaultExtension": "ts",
+      "meta": {
+        "*": {
+          "loader": "ts"
         }
-    },
-    "jspm_packages/npm/angular2@2.0.0-alpha.26": {
-      "format": "esm",
-      "defaultExtension": "es6"
-    },
-      "jspm_packages/npm/reflect-metadata@0.1.0": {
-          "defaultExtension": "js",
-          "main": "Reflect"
-      },
-      "jspm_packages/github/frankwallis/plugin-typescript@1.0.4": {
-          "defaultExtension": "js",
-          "main": "lib/plugin",
-          "map": {
-              "convert-source-map": "npm:convert-source-map@0.4.1",
-              "path": "npm:path@0.11.14",
-              "requires": "npm:requires@1.0.2",
-              "typescript": "npm:typescript@1.5.0-beta"
-          }
-      },
-      "jspm_packages/npm/typescript@1.5.0-beta": {
-          "defaultExtension": "js",
-          "main": "bin/typescript"
       }
-  },
-    "map": {
-        "jspm_packages/npm/angular2@2.0.0-alpha.26": "jspm_packages/npm/angular2@2.0.0-alpha.26/es6/prod",
-        "angular2": "npm:angular2@2.0.0-alpha.26/es6/prod"
     }
+  }
 });
 
 System.config({
   "map": {
-    // "angular2": "npm:angular2@2.0.0-alpha.26",
+    "angular2": "npm:angular2@2.0.0-alpha.26",
     "babel": "npm:babel-core@5.4.7",
     "babel-runtime": "npm:babel-runtime@5.4.7",
     "core-js": "npm:core-js@0.9.14",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
     "ts": "github:frankwallis/plugin-typescript@1.0.4",
+    "typescript": "github:mhegazy/typescript@v1.5-beta2",
     "github:frankwallis/plugin-typescript@1.0.4": {
       "convert-source-map": "npm:convert-source-map@0.4.1",
       "path": "npm:path@0.11.14",
