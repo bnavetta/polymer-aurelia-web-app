@@ -1,0 +1,17 @@
+<template>
+    <h2>${router.title}</h2>
+
+    <ul>
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+            <a href.bind="row.href">${row.title}</a>
+        </li>
+    </ul>
+
+    <div class="page-host">
+        <router-view></router-view>
+    </div>
+
+    <div if.bind="router.isNavigating">
+        Navigating
+    </div>
+</template>

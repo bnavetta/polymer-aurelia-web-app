@@ -8,10 +8,10 @@
 
         <title>Web App</title>
 
-        <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-
+        <!-- <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+        -->
         <!-- <link rel="import" href="elements/elements.html"> -->
-        <link rel="import" href="bower_components/paper-styles/paper-styles.html">
+        <!-- <link rel="import" href="bower_components/paper-styles/paper-styles.html">
         <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
         <link rel="import" href="bower_components/paper-button/paper-button.html"/>
         <link rel="import" href="bower_components/paper-material/paper-material.html"/>
@@ -30,11 +30,12 @@
         <link rel="import" href="bower_components/platinum-sw/platinum-sw-register.html">
         <link rel="import" href="bower_components/platinum-sw/platinum-sw-cache.html">
         <link rel="import" href="bower_components/paper-toast/paper-toast.html">
-        <link rel="import" href="bower_components/paper-button/paper-button.html"/>
+        <link rel="import" href="bower_components/paper-button/paper-button.html"/> -->
     </head>
 
     <body unresolved class="fullbleed layout vertical">
-        <app></app>
+
+        <div id="app"></div>
 
         <!-- <paper-button raised>This is a button</paper-button>
         -->
@@ -49,7 +50,7 @@
         <script src="config.js"></script>
         <script src="build.js"></script>
         <script>
-         System.import('app/main').catch(function(err) {
+         System.import('src/main').catch(function(err) {
              console.error(err);
          });
         </script>

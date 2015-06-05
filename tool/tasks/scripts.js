@@ -22,7 +22,10 @@ gulp.task('copy-system-config', function() {
 
 gulp.task('build-scripts', ['lint', 'copy-system-config'], function(cb) {
     var builder = jspm.Builder();
-    builder.build(paths.entry, null, {sourceMaps: true, minify: false})
+
+    var bundleDef = require('../bundle').concat(paths.entry).join(' + ');
+
+    builder.build(bundleDef, null, {sourceMaps: true, minify: false})
         .then(function(bundle) {
             mkdirp.sync(path.dirname(paths.bundle));
             fs.writeFileSync(paths.bundle, bundle.source);

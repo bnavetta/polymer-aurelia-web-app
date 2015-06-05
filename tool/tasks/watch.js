@@ -17,7 +17,7 @@ var stylePaths = [];
 });
 
 gulp.task('watch', ['serve'], function() {
-    gulp.watch([paths.source, paths.config], ['build-scripts', browserSync.reload]).on('change', reportChange);
+    gulp.watch([paths.source, paths.config, path.join(__dirname, '../bundle.js')], ['build-scripts', browserSync.reload]).on('change', reportChange);
     gulp.watch(stylePaths, ['build-css', browserSync.reload]).on('change', reportChange);
     gulp.watch([paths.html.main, paths.html.app], ['build-html', browserSync.reload]).on('change', reportChange);
     gulp.watch(paths.images, ['build-images', browserSync.reload]).on('change', reportChange);

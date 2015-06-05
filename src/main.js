@@ -1,16 +1,10 @@
-'use strict';
+import './bundle';
 
-import 'reflect-metadata';
-import { bootstrap } from 'angular2/angular2';
-// import { bind } from 'angular2/di';
-import { routerInjectables } from 'angular2/router';
+import {bootstrap} from 'aurelia-bootstrapper';
 
-import App from './app/app';
-
-window.addEventListener('WebComponentsReady', () => {
-    bootstrap(App, [
-        routerInjectables,
-    ])
-        .then(app => console.log('Bootstrapped application:', app))
-        .catch(err => console.error(err, err.stack));
+bootstrap(aurelia => {
+    aurelia.use
+        .standardConfiguration()
+        .developmentLogging();
+    aurelia.start().then(a => a.setRoot('src/app', document.getElementById('app')));
 });
