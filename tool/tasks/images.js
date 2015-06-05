@@ -1,12 +1,15 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var path = require('path');
 
-gulp.task('images', function() {
-    return gulp.src('images/**/*')
+var paths = require('../paths');
+
+gulp.task('build-images', function() {
+    return gulp.src(paths.image)
         .pipe($.cache($.imagemin({
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest(path.join(paths.output, 'images')))
         .pipe($.size({title: 'Images'}));
 });

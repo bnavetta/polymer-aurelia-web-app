@@ -1,4 +1,6 @@
 var gulp = require('gulp');
 var del = require('del');
 
-gulp.task('clean', del.bind(null, 'dist'));
+var paths = require('../paths');
+
+gulp.task('clean', del.bind(null, paths.output));

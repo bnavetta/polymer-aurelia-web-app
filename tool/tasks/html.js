@@ -1,35 +1,38 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var path = require('path');
 
-gulp.task('html', function() {
-    return gulp.src('*.html')
-        .pipe($.replace('elements/elements.html', 'elements/elements.vulcanized.html'))
+var paths = require('../paths');
+
+gulp.task('main-html', function() {
+    return gulp.src(paths.html.main)
+        .pipe($.replace(paths.html.elements.main, paths.html.elements.vulcanized))
         .pipe($.minifyHtml({
             quotes: true,
             empty: true,
             spare: true
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(paths.output))
         .pipe($.size({title: 'HTML'}));
 });
 
-gulp.task('component-html', function() {
-    return gulp.src('app/**/*.html')
-        .pipe(gulp.dest('dist/app'))
+gulp.task('app-html', function() {
+    return gulp.src(paths.html.app)
+        .pipe(gulp.dest(paths.html.appOut))
         .pipe($.size({title: 'Component HTML'}));
 });
 
-gulp.task('vulcanize', function() {
-    // return gulp.src('dist/elements/elements.vulcanized.html')
-    return gulp.src('dist/elements/elements.html')
+gulp.task('vulcanize', ['main-html'], function() {
+    return gulp.src(path.join(paths.output, paths.html.elements.main))
         .pipe($.vulcanize({
-            dest: 'dist/elements',
+            dest: paths.html.elements.out,
             strip: true,
             inlineCss: true,
             inlineScripts: true
         }))
-    // .pipe(gulp.dest('dist/elements'))
-        .pipe($.rename('elements.vulcanized.html'))
-        .pipe(gulp.dest('dist/elements'))
+        .pipe($.rename(paths.html.elements.vulcanized))
+        .pipe(gulp.dest(paths.output))
         .pipe($.size({title: 'Vulcanize'}));
 });
+
+gulp.task('build-html', ['main-html', 'app-html', 'vulcanize']);

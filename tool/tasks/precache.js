@@ -4,22 +4,18 @@ var glob = require('glob');
 var fs = require('fs');
 var path = require('path');
 
-gulp.task('precache', function(cb) {
-    var dir = 'dist';
+var paths = require('../paths');
 
-    glob('{elements,styles,jspm_packages}/**/*.*', {cwd: dir}, function(error, files) {
+gulp.task('build-precache', function(cb) {
+    glob(paths.precache.glob, {cwd: paths.output}, function(error, files) {
         if (error)
         {
             cb(error);
         }
         else
         {
-            files.push('index.html',
-                       'bundle.js',
-                       'config.js',
-                       'bower_components/webcomponentsjs/webcomponents-lite.min.js');
-            var filePath = path.join(dir, 'precache.json');
-            fs.writeFile(filePath, JSON.stringify(files), cb);
+            files.push(paths.precache.extra);
+            fs.writeFile(paths.precache.out, JSON.stringify(files), cb);
         }
     });
 });

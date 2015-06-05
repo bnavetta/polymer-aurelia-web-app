@@ -3,11 +3,9 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var autoprefixer = require('autoprefixer-core');
-
 var path = require('path');
-var paths = require('../paths');
 
-// TODO: path config
+var paths = require('../paths');
 
 var AUTOPREFIXER_BROWSERS = [
     'ie >= 10',
@@ -29,11 +27,7 @@ function styleTask(srcDir, srcs) {
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
         .pipe($.sass({
-            includePaths: [
-                // path.join(__dirname, '../styles'),
-                // path.join(__dirname, '../bower_components')
-                'styles', 'bower_components'
-            ]
+            includePaths: paths.styles.includes
         }))
         .pipe($.postcss([
             autoprefixer({ browsers: AUTOPREFIXER_BROWSERS })
@@ -44,19 +38,19 @@ function styleTask(srcDir, srcs) {
         .pipe($.size({title: 'CSS - ' + srcDir}));
 }
 
-gulp.task('styles', function() {
+gulp.task('main-styles', function() {
     var config = paths.styles.main;
     return styleTask(config[0], config[1]);
 });
 
-gulp.task('elementStyles', function() {
+gulp.task('element-styles', function() {
     var config = paths.styles.element;
     return styleTask(config[0], config[1]);
 });
 
-gulp.task('componentStyles', function() {
-    var config = paths.styles.component;
+gulp.task('app-styles', function() {
+    var config = paths.styles.app;
     return styleTask(config[0], config[1]);
 });
 
-gulp.task('css', ['styles', 'elementStyles', 'componentStyles']);
+gulp.task('build-styles', ['main-styles', 'element-styles', 'app-styles']);
