@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
-require('require-dir')('tasks');
+require('require-dir')('tool/tasks');
 
 gulp.task('build', function(cb) {
     runSequence(
