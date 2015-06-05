@@ -1,7 +1,7 @@
 System.config({
   "baseURL": "/",
   "defaultJSExtensions": true,
-  "transpiler": "typescript",
+  "transpiler": "babel",
   "babelOptions": {
     "optional": [
       "runtime",
@@ -14,18 +14,6 @@ System.config({
   "paths": {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  },
-  "packages": {
-    "app": {
-      "main": "main.ts",
-      "format": "esm",
-      "defaultExtension": "ts",
-      "meta": {
-        "*": {
-          "loader": "ts"
-        }
-      }
-    }
   }
 });
 

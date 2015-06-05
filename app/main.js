@@ -7,7 +7,6 @@ import { routerInjectables } from 'angular2/router';
 
 import App from './app/app';
 
-
 window.addEventListener('WebComponentsReady', () => {
     bootstrap(App, [
         routerInjectables,

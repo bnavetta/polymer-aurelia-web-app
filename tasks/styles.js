@@ -50,7 +50,7 @@ gulp.task('elementStyles', function() {
 });
 
 gulp.task('componentStyles', function() {
-    return styleTask('js', ['**/*.css']);
+    return styleTask('app', ['**/*.css']);
 });
 
 gulp.task('css', ['styles', 'elementStyles', 'componentStyles']);

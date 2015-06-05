@@ -1,27 +1,45 @@
-<style>@import "app.css";</style>
+<style is="custom-style">@import "app.css";</style>
 
 <paper-drawer-panel forceNarrow #drawerPanel>
+
     <div drawer>
 
-        <paper-toolbar>
+        <paper-toolbar id="drawer-toolbar">
             <span>Menu</span>
         </paper-toolbar>
 
         <paper-menu class="list">
-            <a router-link="home">Home</a>
+            <a router-link="home">
+                <iron-icon icon="home"></iron-icon>
+                <span>Home</span>
+            </a>
         </paper-menu>
 
     </div>
-    <div main>
-        <paper-header-panel class="flex" mode="waterfall-tall">
-            <paper-toolbar>
-                <button tabindex="1" id="paperToggle" paper-drawer-toggle>
-                    <iron-icon icon="menu" paper-drawer-toggle></iron-icon>
-                </button>
-            </paper-toolbar>
-            <div>
-                <router-outlet></router-outlet>
+
+    <paper-scroll-header-panel main class="flex" condenses>
+
+        <paper-toolbar id="main-toolbar">
+
+            <button tabindex="1" id="paper-toggle" paper-drawer-toggle>
+                <iron-icon icon="menu" paper-drawer-toggle></iron-icon>
+            </button>
+
+            <span class="flex"></span>
+
+            <div class="bottom">
+                Web App
             </div>
-        </paper-header-panel>
-    </div>
+        </paper-toolbar>
+
+        <div id="main-content">
+            <paper-material elevation="1">
+                <paper-button raised>Hi</paper-button>
+
+                <router-outlet></router-outlet>
+            </paper-material>
+        </div>
+
+    </paper-scroll-header-panel>
+
 </paper-drawer-panel>

@@ -6,7 +6,7 @@ import {Component, View} from 'angular2/angular2';
     selector: 'home'
 })
 @View({
-    templateUrl: 'js/home/home.html'
+    templateUrl: 'app/home/home.html'
 })
 export default class Home {
     constructor() {
