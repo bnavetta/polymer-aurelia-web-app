@@ -11,7 +11,7 @@ gulp.task('copy-system-config', function() {
 
 gulp.task('bundle-js', ['copy-system-config'], function(cb) {
     var builder = jspm.Builder();
-    builder.build('app/main', null, {sourceMaps: true, minify: false})
+    builder.build('src/main', null, {sourceMaps: true, minify: false})
         .then(function(bundle) {
             mkdirp.sync('dist');
             fs.writeFileSync('dist/build.js', bundle.source);
