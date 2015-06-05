@@ -2,15 +2,18 @@
   "jspm": {
     "directories": {},
     "dependencies": {
-      "angular2": "npm:angular2@^2.0.0-alpha.26",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.0",
+      "aurelia-animator-css": "github:aurelia/animator-css@^0.2.0",
+      "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.12.0",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.7.1",
+      "aurelia-framework": "github:aurelia/framework@^0.11.0",
+      "aurelia-http-client": "github:aurelia/http-client@^0.8.1",
+      "aurelia-router": "github:aurelia/router@^0.8.1",
       "ts": "github:frankwallis/plugin-typescript@^1.0.4"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.4.3",
       "babel-runtime": "npm:babel-runtime@^5.4.3",
-      "core-js": "npm:core-js@^0.9.10",
-      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+      "core-js": "npm:core-js@^0.9.10"
     }
   },
   "devDependencies": {
@@ -19,6 +22,7 @@
     "del": "^1.2.0",
     "glob": "^5.0.10",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
     "gulp-cache": "^0.2.9",
     "gulp-changed": "^1.2.1",
     "gulp-cssnext": "^1.0.0",
@@ -29,18 +33,30 @@
     "gulp-load-plugins": "^0.10.0",
     "gulp-minify-css": "^1.1.5",
     "gulp-minify-html": "^1.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-protractor": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uncss": "^1.0.1",
     "gulp-vulcanize": "^6.0.0",
+    "jasmine-core": "^2.3.4",
     "jspm": "jspm/jspm-cli",
+    "karma": "^0.12.36",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.5",
+    "karma-jspm": "^1.1.5",
     "merge-stream": "^0.1.7",
     "mkdirp": "^0.5.1",
+    "object.assign": "^3.0.0",
     "opn": "^1.0.2",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.0",
-    "vulcanize": "^1.8.1"
+    "vinyl-paths": "^1.0.0",
+    "vulcanize": "^1.8.1",
+    "yargs": "^3.10.0"
   }
 }
