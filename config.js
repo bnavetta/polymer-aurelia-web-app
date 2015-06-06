@@ -29,6 +29,7 @@ System.config({
     "aurelia-history-browser": "github:aurelia/history-browser@0.4.0",
     "aurelia-http-client": "github:aurelia/http-client@0.8.1",
     "aurelia-loader-default": "github:aurelia/loader-default@0.7.0",
+    "aurelia-logging": "github:aurelia/logging@0.4.0",
     "aurelia-router": "github:aurelia/router@0.8.1",
     "aurelia-templating": "github:aurelia/templating@0.11.2",
     "aurelia-templating-binding": "github:aurelia/templating-binding@0.11.0",

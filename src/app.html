@@ -1,17 +1,45 @@
 <template>
-    <h2>${router.title}</h2>
 
-    <ul>
-        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-            <a href.bind="row.href">${row.title}</a>
-        </li>
-    </ul>
+    <style is="custom-style">
+     paper-toolbar .title {
+         font-size: 40px;
+         margin-left: 60px;
+     }
+    </style>
 
-    <div class="page-host">
-        <router-view></router-view>
-    </div>
+    <paper-drawer-panel force-narrow id="paperDrawerPanel">
 
-    <div if.bind="router.isNavigating">
-        Navigating
-    </div>
+        <div drawer>
+            <paper-toolbar id="drawerToolbar" class="paper-header">
+                <span>Menu</span>
+            </paper-toolbar>
+            <paper-menu>
+                <paper-item repeat.for="route of router.navigation">
+                    <a href.bind="route.href">${route.title}</a>
+                </paper-item>
+            </paper-menu>
+        </div>
+
+        <paper-scroll-header-panel condenses main id="mainScrollPanel">
+
+            <paper-toolbar class="tall paper-header" id="mainToolbar">
+                <paper-icon-button icon="menu" tabindex="1" paper-drawer-toggle></paper-icon-button>
+                <span class="title">${router.title}</span>
+                <span if.bind="router.isNavigating">
+                    <iron-icon icon="autorenew"></iron-icon>
+                </span>
+            </paper-toolbar>
+
+            <div>
+                <div style="height: 400px">
+                    Big
+                </div>
+                <div id="page-host">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </paper-scroll-header-panel>
+
+    </paper-drawer-panel>
+
 </template>

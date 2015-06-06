@@ -6,7 +6,7 @@ var paths = require('../paths');
 
 gulp.task('main-html', function() {
     return gulp.src(paths.html.main)
-        .pipe($.replace(paths.html.elements.main, paths.html.elements.vulcanized))
+        // .pipe($.replace(paths.html.elements.main, paths.html.elements.vulcanized))
         .pipe($.minifyHtml({
             quotes: true,
             empty: true,
