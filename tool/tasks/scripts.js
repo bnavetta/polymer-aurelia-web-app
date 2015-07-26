@@ -20,7 +20,7 @@ gulp.task('copy-system-config', function() {
     return gulp.src(paths.config).pipe(gulp.dest(paths.output));
 });
 
-gulp.task('build-scripts', ['lint', 'copy-system-config'], function(cb) {
+gulp.task('build-scripts', [/*'lint', */'copy-system-config'], function(cb) {
     var builder = jspm.Builder();
 
     var bundleDef = require('../bundle').concat(paths.entry).join(' + ');

@@ -8,6 +8,7 @@ gulp.task('serve', ['build'], function() {
         notify: false,
         server: {
             baseDir: 'dist'
-        }
+        },
+        open: false
     });
 });
