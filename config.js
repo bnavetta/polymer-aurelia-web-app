@@ -1,6 +1,5 @@
 System.config({
   "baseURL": "/",
-  "defaultJSExtensions": true,
   "transpiler": "babel",
   "babelOptions": {
     "optional": [
@@ -9,12 +8,14 @@ System.config({
       "es7.classProperties"
     ]
   },
+  "paths": {
+    "github:*": "jspm_packages/github/*.js",
+    "npm:*": "jspm_packages/npm/*.js",
+    "*": "*.js"
+  },
+  "defaultJSExtensions": true,
   "typescriptOptions": {
     "emitDecoratorMetadata": true
-  },
-  "paths": {
-    "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
   }
 });
 
@@ -34,8 +35,8 @@ System.config({
     "aurelia-templating-binding": "github:aurelia/templating-binding@0.13.1",
     "aurelia-templating-resources": "github:aurelia/templating-resources@0.13.1",
     "aurelia-templating-router": "github:aurelia/templating-router@0.14.0",
-    "babel": "npm:babel-core@5.8.5",
-    "babel-runtime": "npm:babel-runtime@5.8.5",
+    "babel": "npm:babel-core@5.8.20",
+    "babel-runtime": "npm:babel-runtime@5.8.20",
     "core-js": "npm:core-js@0.9.18",
     "ts": "github:frankwallis/plugin-typescript@2.0.4",
     "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.7",
@@ -160,6 +161,9 @@ System.config({
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
+    },
+    "npm:babel-runtime@5.8.20": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:babel-runtime@5.8.5": {
       "process": "github:jspm/nodelibs-process@0.1.1"
