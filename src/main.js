@@ -2,7 +2,8 @@ import './bundle';
 
 import {bootstrap} from 'aurelia-bootstrapper';
 
-document.addEventListener('WebComponentsReady', () => {
+// document.addEventListener('WebComponentsReady', () => {
+    console.log("Initializing!");
     bootstrap(aurelia => {
         aurelia.use
             .standardConfiguration()
@@ -10,4 +11,4 @@ document.addEventListener('WebComponentsReady', () => {
             .developmentLogging();
         aurelia.start().then(a => a.setRoot('src/app', document.getElementById('app')));
     });
-});
+// });

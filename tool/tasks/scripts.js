@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var jspm = require('jspm');
+var jspmConfig = require('jspm/lib/config');
 var mkdirp = require('mkdirp');
 
 var fs = require('fs');
@@ -30,6 +31,13 @@ gulp.task('build-scripts', [/*'lint', */'copy-system-config'], function(cb) {
             mkdirp.sync(path.dirname(paths.bundle));
             fs.writeFileSync(paths.bundle, bundle.source);
             fs.writeFileSync(paths.bundle + '.map', bundle.sourceMap);
+
+            jspmConfig.loadSync();
+            if(!jspmConfig.loader.bundles) jspmConfig.loader.bundles = {};
+            jspmConfig.loader.bundles[path.basename(paths.bundle)] = bundle.modules;
+            jspmConfig.loader.__fileName = path.join(paths.output, 'config.js');
+            jspmConfig.save();
+
             cb();
         })
         .catch(function(err) {
