@@ -1,3 +1,4 @@
+/// <reference path="aurelia-framework/aurelia-framework.d.ts"/>
 import { computedFrom } from 'aurelia-framework';
 
 export class Home {

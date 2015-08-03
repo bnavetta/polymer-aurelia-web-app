@@ -10,13 +10,28 @@ System.config({
     ]
   },
   "typescriptOptions": {
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "resolveAmbientRefs": true,
+    "typeCheck": true
   },
   "paths": {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   }
 });
+
+System.config({
+    "packages": {
+        "src": {
+            "defaultExtension": "ts",
+            "meta": {
+                "*.ts": {
+                    "loader": "ts"
+                }
+            }
+        }
+    }
+})
 
 System.config({
   "map": {
@@ -191,4 +206,3 @@ System.config({
     }
   }
 });
-

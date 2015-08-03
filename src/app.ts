@@ -1,3 +1,4 @@
+/// <reference path="aurelia-framework/aurelia-framework.d.ts"/>
 import { LogManager } from 'aurelia-framework';
 
 const logger = LogManager.getLogger('app');
